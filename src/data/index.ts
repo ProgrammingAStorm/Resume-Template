@@ -5,7 +5,7 @@ export class Data {
     workHistory = new WorkData();
     education = new EducationData();
     projects = new ProjectsData();
-}
+};
 
 export class HeaderData {
     name: string = "Mark Pavel";
