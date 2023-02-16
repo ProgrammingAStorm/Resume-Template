@@ -1,7 +1,7 @@
 import { SkillsData } from "../data"
 
 export default function (skillsData: SkillsData) {
-    return <section className="flex flex-col items-center">
+    return <section className="flex flex-col items-center border-b-2 border-cyan-900">
         <h1 className="w-full text-center">Skills</h1>
 
         <div className="flex">

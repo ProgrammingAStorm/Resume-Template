@@ -9,9 +9,11 @@ import { data } from "./data";
 
 function App() {
   return (
-    <main className="">
-      <Header {...data.header} />
-      <Details {...data.personalDetails} />
+    <main className="flex flex-col items-center">
+      <div className="flex justify-center items-end w-screen">
+        <Header {...data.header} />
+        <Details {...data.personalDetails} />
+      </div>
       <Skills {...data.skills} />
       <WorkHistory {...data.workHistory} />
       <Education {...data.education} />
