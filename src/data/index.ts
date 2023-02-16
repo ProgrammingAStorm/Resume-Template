@@ -1,11 +1,8 @@
 export class Data {
     header: HeaderData = new HeaderData();
     personalDetails: PersonalData = new PersonalData();
-
     skills = new SkillsData();
-    workHistory = {
-
-    }
+    workHistory = new WorkData();
     education = [
         {
             name: "",
@@ -149,6 +146,110 @@ export class SkillsData {
         "Committed",
         "Responsible",
         "Curious"
+    ];
+}
+
+export class WorkData {
+    entries = [
+        {
+            employer: "2U Bootcamps",
+            title: "Full-Stack Bootcamp Teacher's Instructor",
+            time: {
+                start: "Februrary 2023",
+                end: ""
+            },
+            local: "Lanham, MD",
+            current: true,
+            tasks: [
+                "Taking Attendence",
+                "Pushing Activities To GitLab",
+                "Grading Projects",
+                "Being Available To Students Through Slack To Chat About Things They Need Help With",
+                "Meeting In Zoom Calls 1-On-1 With Students",
+                "Helping Students Catch-Up During Class"
+            ],
+            dayToDay: [
+                "One Slack And Monitor Until Office Hours",
+                "Help Students As Needed",
+                "Join Zoom Call At Office Hours",
+                "Stay In Call Until Class Starts",
+                "Help Students In Zoom As Needed",
+                "Help Students As Needed During Class",
+                "Help Students As Needed After Class",
+                "Stay In Office Hours Till Closing Or Students All Leave"
+            ],
+            keyPoints: [
+                "Working With Students",
+                "Discussing Full-Stack Web Development",
+                "Mentoring Students",
+                "Teaching Industry Conventions And Best Practices",
+                "Encouraging Active Problem Solving"
+            ]
+        },
+        {
+            employer: "Taco Bell",
+            title: "Customer Service Representative",
+            time: {
+                start: "August 2021",
+                end: ""
+            },
+            local: "Howell, MI",
+            current: true,
+            tasks: [
+                "Count Drawer",
+                "Manage Drawer Monies",
+                "Maintain Seamless Customer Interactions",
+                "Prevent Customer Inconvenience",
+                "Maintain Local and General Cleanliness",
+                "Refill Food Stock"
+            ],
+            dayToDay: [
+                "Clocking In",
+                "Check Daily Schedule",
+                "Check Shift Deployment",
+                "Check For Immediate Responsibilites",
+                "Maintain Workstation",
+                "Maintain Customer Sale Speed",
+                "Maintain Cleanliness"
+            ],
+            keyPoints: [
+                "Customers often have grievances that must be dealt with in a manner that is poth satisfactory and efficient.",
+                "Food stocks totals must be maintained to always assure ingredient up-time.",
+                "Customers are always prioritized, and speed and quality is the number one concern."
+            ]
+        },
+        {
+            employer: "Taco Bell",
+            title: "Customer Service Representative",
+            time: {
+                start: "February 2019",
+                end: "February 2021"
+            },
+            local: "Livonia, MI",
+            current: false,
+            tasks: [
+                "Count Drawer",
+                "Manage Drawer Monies",
+                "Maintain Seamless Customer Interactions",
+                "Prevent Customer Inconvenience",
+                "Maintain Local and General Cleanliness",
+                "Refill Food Stock"
+            ],
+            dayToDay: [
+                "Clocking In",
+                "Check Daily Schedule",
+                "Check Shift Deployment",
+                "Check For Immediate Responsibilites",
+                "Maintain Workstation",
+                "Maintain Customer Sale Speed",
+                "Maintain Cleanliness"
+            ],
+            keyPoints: [
+                "Customers often have grievances that must be dealt with in a manner that is poth satisfactory and efficient.",
+                "Food stocks totals must be maintained to always assure ingredient up-time.",
+                "Customers are always prioritized, and speed and quality is the number one concern."
+            ]
+        },
     ];
 }
 
