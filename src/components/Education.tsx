@@ -1,28 +1,30 @@
 import { EducationData } from "../data";
 
 export default function Education(educationData: EducationData) {
-    return <section>
+    return <section className="flex flex-col items-center">
         <h1>Education</h1>
 
-        <article>
-            <ul>
-                {educationData.entries.map((entry, index) => {
-                    return <li key={index}>
-                        <h2>{entry.name}</h2>
-                        <h3>{entry.locat}</h3>
+        <ul>
+            {educationData.entries.map((entry, index) => {
+                return <li key={index}>
+                    <article className="flex items-center m-2">
+                        <div className="w-1/3 m-1">
+                            <h2>{entry.name}</h2>
+                            <h3>{entry.locat}</h3>
 
-                        <h4>Major:</h4>
-                        <p>{entry.major}</p>
+                            <h4>Major:</h4>
+                            <p>{entry.major}</p>
 
-                        <h4>Tier:</h4>
-                        <p>{entry.tier}</p>
+                            <h4>Tier:</h4>
+                            <p>{entry.tier}</p>
 
-                        <h4>GPA:</h4>
-                        <p>{entry.gpa}</p>
+                            <h4>GPA:</h4>
+                            <p>{entry.gpa}</p>
 
-                        <h4>{entry.time.start} - {entry.time.end}</h4>
+                            <h4>{entry.time.start} - {entry.time.end}</h4>
+                        </div>
 
-                        <div>
+                        <div className="w-2/3 m-1">
                             <h4>Description</h4>
 
                             <ul>
@@ -33,9 +35,9 @@ export default function Education(educationData: EducationData) {
                                 })}
                             </ul>
                         </div>
-                    </li>
-                })}
-            </ul>
-        </article>
+                    </article>
+                </li>
+            })}
+        </ul>
     </section>
 }
