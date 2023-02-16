@@ -284,7 +284,13 @@ export class ProjectsData {
     projects = [
         {
             name: "Instaclone",
-            techStack: ["MERN"],
+            techStack: [
+                "MongoDB",
+                "Express",
+                "React",
+                "Node.js"
+
+            ],
             purpose: "It was created as the capstone project for the Full-Stack Coding Bootcamp. It was intended to show off all of what we had learned during the bootcamp, and show of our skills as developers. From data coupling to API routes to layout design, as well as data modeling, this project covered it all.",
             takeAways: [
                 "People work at different paces and we need to be able to communicate with the lowest common demoninator at times.",
