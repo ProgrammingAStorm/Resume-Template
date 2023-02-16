@@ -3,16 +3,7 @@ export class Data {
     personalDetails: PersonalData = new PersonalData();
     skills = new SkillsData();
     workHistory = new WorkData();
-    education = [
-        {
-            name: "",
-
-        },
-        {
-            name: "",
-
-        }
-    ]
+    education = new EducationData();
     projects = {
 
     }
@@ -250,6 +241,44 @@ export class WorkData {
                 "Customers are always prioritized, and speed and quality is the number one concern."
             ]
         },
+    ];
+}
+
+export class EducationData {
+    entries = [
+        {
+            name: "MSU Full-Stack Coding Bootcamp",
+            locat: "Lansing, MI",
+            major: "Full-Stack Web Development",
+            tier: "Certificate",
+            gpa: "3.4",
+            time: {
+                start: "May 2022",
+                end: "September 2022"
+            },
+            description: [
+                "Students were taken from the ground up and taught the elementary aspects of Web Development.",
+                "Students begin with HTML, CSS, and Javascript basics, and work their way up to proficiency with the MERN tech stack.",
+                "Students were also taught Object-Oriented Programming topics with various ORMs.",
+                "Students build Full-Stack web apps on top of APIs that they themselves have layed out."
+            ]
+        },
+        {
+            name: "Schoolcraft College",
+            locat: "Livonia, MI",
+            major: "Computer Information Systems",
+            tier: "Associate",
+            gpa: "3.895",
+            time: {
+                start: "September 2019",
+                end: "February 2021"
+            },
+            description: [
+                "Students were taken from the ground up and given introductory courses on computer science and coding concepts.",
+                "Students were guided along the path to application development by teaching Python, C++, C#, and Java.",
+                "Languages offered study of concepts such as programming logic, algorithms, data-structures, Windows Forms, and Object-Oriented Programming respectively."
+            ]
+        }
     ];
 }
 
