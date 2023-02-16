@@ -4,16 +4,14 @@ export class Data {
     skills = new SkillsData();
     workHistory = new WorkData();
     education = new EducationData();
-    projects = {
-
-    }
+    projects = new ProjectsData();
 }
 
 export class HeaderData {
     name: string = "Mark Pavel";
     psuedonym: string = "ProgrammingAStorm";
     position: string = "Full-Stack Web Developer";
-}
+};
 
 export class PersonalData {
     personalDetails = [
@@ -43,7 +41,7 @@ export class PersonalData {
             key: 4,
         }
     ];
-}
+};
 
 export class SkillsData {
     languages = {
@@ -138,7 +136,7 @@ export class SkillsData {
         "Responsible",
         "Curious"
     ];
-}
+};
 
 export class WorkData {
     entries = [
@@ -242,7 +240,7 @@ export class WorkData {
             ]
         },
     ];
-}
+};
 
 export class EducationData {
     entries = [
@@ -280,7 +278,40 @@ export class EducationData {
             ]
         }
     ];
-}
+};
+
+export class ProjectsData {
+    projects = [
+        {
+            name: "Instaclone",
+            techStack: ["MERN"],
+            purpose: "It was created as the capstone project for the Full-Stack Coding Bootcamp. It was intended to show off all of what we had learned during the bootcamp, and show of our skills as developers. From data coupling to API routes to layout design, as well as data modeling, this project covered it all.",
+            takeAways: [
+                "People work at different paces and we need to be able to communicate with the lowest common demoninator at times.",
+                "Sometimes good enough is better than not at all.",
+                "Being a good leader is about being the one with your head screwed on correct, that answers all of the questions, and makes sure everyone is on the up-and-up."
+            ],
+        },
+        {
+            name: "Flutter Portfolio",
+            techStack: ["Flutter"],
+            purpose: "To get familiar with the Dart programming language and the Flutter front-end design framework. I wanted to get practice with Flutter's design implementation, as well as get more experience with Object-Oriented Programming. I would said my time with Flutter was well worth-it.",
+            takeAways: [
+                "Learning a new language can take longer than you estimated.",
+                "Sometimes design elements that seem simple to implement end up taking up the most time.",
+                "There will come times when you need to stop working on something for the sake of preventing burn-out."
+            ],
+        },
+        {
+            name: "Resume-Template",
+            techStack: ["React", "Vite", "Tailwind"],
+            purpose: "To design a stylish resume with Tailwind, while getting practice in general with Tailwind.",
+            takeAways: [
+                "React projects generated with Vite run very efficiently, and are created very seemlessly."
+            ],
+        },
+    ];
+};
 
 const data = new Data();
 
