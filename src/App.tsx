@@ -10,7 +10,12 @@ import { data } from "./data";
 function App() {
   return (
     <main className="flex flex-col items-center">
-      <div className="flex justify-between items-end w-screen">
+      <div className="
+        flex
+        justify-between items-end
+        border-b-2 border-cyan-900
+        w-screen
+      ">
         <Header {...data.header} />
         <Details {...data.personalDetails} />
       </div>
