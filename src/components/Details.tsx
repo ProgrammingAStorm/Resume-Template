@@ -1,7 +1,7 @@
 import { PersonalData } from "../data";
 
 export default function Details(personalData: PersonalData) {
-    return <section className="flex flex-col items-center">
+    return <section className="flex flex-col items-center w-1/2">
         <h1>Personal Information</h1>
 
         <ul className="flex flex-col items-center">

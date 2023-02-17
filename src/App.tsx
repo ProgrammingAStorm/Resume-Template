@@ -10,7 +10,7 @@ import { data } from "./data";
 function App() {
   return (
     <main className="flex flex-col items-center">
-      <div className="flex justify-center items-end w-screen">
+      <div className="flex justify-between items-end w-screen">
         <Header {...data.header} />
         <Details {...data.personalDetails} />
       </div>
