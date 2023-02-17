@@ -9,13 +9,8 @@ import { data } from "./data";
 
 function App() {
   return (
-    <main className="flex flex-col items-center">
-      <div className="
-        flex
-        justify-between items-end
-        border-b-2 border-cyan-900
-        w-screen
-      ">
+    <main className="flex flex-col items-center m-4 overflow-hidden">
+      <div className="flex border-b-2 border-cyan-900 w-screen ">
         <Header {...data.header} />
         <Details {...data.personalDetails} />
       </div>

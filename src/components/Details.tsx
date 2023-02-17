@@ -9,17 +9,33 @@ export default function Details(personalData: PersonalData) {
         w-1/2
         h-full
     ">
-        <h1>Personal Information</h1>
+        <h1
+            className="
+                m-4
+                text-5xl
+            "
+        >Personal Information</h1>
 
-        <ul className="flex flex-col items-center">
+        <ul className="
+            flex flex-wrap
+            justify-evenly
+        ">
             {personalData.personalDetails.map((details) => {
                 return <li
                     key={details.key}
-                    className="flex flex-col text-center m-2"
+                    className="
+                        flex flex-col
+                        text-center 
+                        m-3
+                    "
                 >
-                    <h2>{details.name}:</h2>
+                    <h2
+                        className="
+                            text-2xl
+                        "
+                    >{details.name}:</h2>
                     <a
-                        className=""
+                        className="text-xl"
                         href={details.link}
                     >{details.link}</a>
                 </li>
