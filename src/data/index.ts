@@ -56,18 +56,10 @@ export class SkillsData {
             },
         ],
         familiar: [
-            {
-                name: "Typescript",
-            },
-            {
-                name: "C#",
-            },
-            {
-                name: "Java",
-            },
-            {
-                name: "C++",
-            },
+            "Typescript",
+            "C#",
+            "Java",
+            "C++",
         ]
     };
     frontEnd = {

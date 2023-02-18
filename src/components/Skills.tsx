@@ -1,81 +1,120 @@
+import { ReactNode } from "react"
 import { SkillsData } from "../data"
 
 export default function (skillsData: SkillsData) {
-    return <section className="flex flex-col items-center px- w-full">
+    // Distributes groups of something accross 
+    function distribute(tools: Array<any>, total: number): ReactNode {
+        // List of groups of three
+        const boxes: Array<Array<ReactNode>> = [];
+        // Current box being added
+        let currentBox: Array<ReactNode> = [];
+
+        console.log(tools)
+
+        // Loops over the tools
+        tools.forEach((tool, index) => {
+            // Checks to see if the current box is filled
+            if(currentBox.length < total) {
+                // If not then it pushes the li to the current box
+                currentBox.push(<li key={index} className="list-disc my-1 mx-2">
+                    <h4 className="text-2xl">{tool}</h4>
+                </li>);
+            // If it is, then it adds it to the boxes and clears the current box 
+            } else {
+                boxes.push(currentBox)
+                currentBox = [];
+
+                currentBox.push(<li key={index} className="list-disc my-1 mx-2">
+                    <h4 className="text-2xl">{tool}</h4>
+                </li>);
+            }
+
+            if(currentBox.length === total) {
+                boxes.push([...currentBox]);
+                currentBox = [];
+            }
+        });
+
+        console.log(boxes)
+
+        return boxes.map((box, index) => {
+            return <div key={index} className="m-2">
+                {box.map((items) => {
+                    return items;
+                })}
+            </div>
+        })
+    }
+
+    return <section className="flex flex-col items-center py-2 w-full">
         <div className="w-full">
-            <h1 className="w-full text-center">Skills</h1>
+            <h1 className="w-full text-center text-7xl">Skills</h1>
 
             <div className="flex justify-around">
                 <article className="flex flex-col items-center w-fit m-2">
-                    <h2>Languages</h2>
+                    <h2 className="text-4xl">Languages</h2>
 
-                    <div className="flex flex-col items-center m-1">
-                        <h3>Comfortable</h3>
+                    <div className="flex flex-col items-center m-2">
+                        <h3 className="text-3xl">Comfortable</h3>
 
                         <ul>
                             {skillsData.languages.comfortable.map((language, index) => {
-                                return <li key={index} className="m-1">
-                                    <p>{language.name}</p>
-                                    <p>{language.time}</p>
+                                return <li key={index} className="m-1 list-disc">
+                                    <p className="text-2xl m-2">{language.name}</p>
+                                    <p className="text-2xl m-2">{language.time}</p>
                                 </li>
                             })}
                         </ul>
                     </div>
 
-                    <div className="flex flex-col items-center m-1">
-                        <h3>Familiar</h3>
+                    <div className="flex flex-col items-center m-2">
+                        <h3 className="text-3xl">Familiar</h3>
 
-                        <ul>
-                            {skillsData.languages.familiar.map((language, index) => {
-                                return <li key={index} className="m-1">
-                                    <p>{language.name}</p>
-                                </li>
-                            })}
+                        <ul className="flex justify-between">
+                            {
+                                distribute(skillsData.languages.familiar, 2)
+                            }
                         </ul>
                     </div>
                 </article>
 
                 <article className="flex flex-col items-center w-fit m-2">
-                    <h2>Front-End</h2>
+                    <h2 className="text-4xl">Front-End</h2>
 
                     <div className="flex flex-col items-center m-2">
-                        <h3>Frameworks & Libraries</h3>
+                        <h3 className="text-3xl">Frameworks & Libraries</h3>
 
-                        <ul>
+                        <ul className="flex justify-between w-full">
                             {skillsData.frontEnd.frameworksLibraries.map((tool, index) => {
                                 return <li key={index}
                                     className="m-1"
                                 >
-                                    <h4>{tool.name}</h4>
-                                    <p>{tool.time}</p>
+                                    <h4 className="text-2xl">{tool.name}</h4>
+                                    <p className="text-xl">{tool.time}</p>
                                 </li>
                             })}
                         </ul>
                     </div>
 
                     <div className="flex flex-col items-center m-2">
-                        <h3>Styling Tools</h3>
+                        <h3 className="text-3xl">Styling Tools</h3>
 
-                        <ul>
-                            {skillsData.frontEnd.stylingTools.map((tool, index) => {
-                                return <li key={index}
-                                    className="m-1"
-                                >
-                                    <h4>{tool}</h4>
-                                </li>
-                            })}
+                        <ul className="flex justify-between">
+                            {
+                                distribute(skillsData.frontEnd.stylingTools, 3)
+                            }
                         </ul>
                     </div>
 
                     <div className="flex flex-col items-center m-2">
-                        <h3>Build Tools</h3>
+                        <h3 className="text-3xl">Build Tools</h3>
 
                         <ul>
                             {skillsData.frontEnd.buildTools.map((tool, index) => {
                                 return <li key={index}
                                     className="m-1"
                                 >
-                                    <h4>{tool.name}</h4>
+                                    <h4 className="text-2xl">{tool.name}</h4>
                                 </li>
                             })}
                         </ul>
@@ -83,7 +122,7 @@ export default function (skillsData: SkillsData) {
                 </article>
 
                 <article className="flex flex-col items-center w-fit m-2">
-                    <h2>APIs & SDKs</h2>
+                    <h2 className="text-4xl">APIs & SDKs</h2>
 
                     <ul>
                         {skillsData.apisSdks.map((tool, index) => {
@@ -91,51 +130,51 @@ export default function (skillsData: SkillsData) {
                                 key={index}
                                 className="m-1"
                             >
-                                <h3>{tool}</h3>
+                                <h3 className="text-3xl">{tool}</h3>
                             </li>
                         })}
                     </ul>
                 </article>
 
                 <article className="flex flex-col items-center w-fit m-2">
-                    <h2>Back-End</h2>
+                    <h2 className="text-4xl">Back-End</h2>
 
                     <div className="flex flex-col m-2 items-center">
-                        <h3>APIs</h3>
+                        <h3 className="text-3xl">APIs</h3>
 
                         <ul>
                             {skillsData.backEnd.apis.map((tool, index) => {
                                 return <li key={index}
                                     className="m-1"
                                 >
-                                    <h4>{tool.name}</h4>
+                                    <h4 className="text-2xl">{tool.name}</h4>
                                 </li>
                             })}
                         </ul>
                     </div>
 
                     <div className="flex flex-col m-2 items-center">
-                        <h3>Frameworks</h3>
+                        <h3 className="text-3xl">Frameworks</h3>
                         <ul>
                             {skillsData.backEnd.frameworks.map((tool, index) => {
                                 return <li key={index}
                                     className="m-1"
                                 >
-                                    <h4>{tool}</h4>
+                                    <h4 className="text-2xl">{tool}</h4>
                                 </li>
                             })}
                         </ul>
                     </div>
 
                     <div className="flex flex-col m-2 items-center">
-                        <h3>ORMs</h3>
+                        <h3 className="text-3xl">ORMs</h3>
 
                         <ul>
                             {skillsData.backEnd.orms.map((tool, index) => {
                                 return <li key={index}
                                     className="m-1"
                                 >
-                                    <h4>
+                                    <h4 className="text-2xl">
                                         {tool}
                                     </h4>
                                 </li>
@@ -145,19 +184,10 @@ export default function (skillsData: SkillsData) {
                 </article>
 
                 <article className="flex flex-col items-center m-2">
-                    <h2>Traits</h2>
+                    <h2 className="text-4xl">Traits</h2>
 
-                    <ul>
-                        {skillsData.traits.map((tool, index) => {
-                            return <li
-                                key={index}
-                                className="m-1"
-                            >
-                                <h3>
-                                    {tool}
-                                </h3>
-                            </li>
-                        })}
+                    <ul className="flex">
+                        {distribute(skillsData.traits, 3)}
                     </ul>
                 </article>
             </div>
