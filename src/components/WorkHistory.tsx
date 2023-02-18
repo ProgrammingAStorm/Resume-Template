@@ -2,9 +2,9 @@ import { WorkData } from "../data";
 
 export default function WorkHistory(workData: WorkData) {
     return <section className="flex flex-col items-center">
-        <h1 className="text-7xl">Work History</h1>
+        <h1 className="text-7xl border-x-2 border-cyan-900 p-10">Work History</h1>
 
-        <ul className="flex justify-center flex-wrap p-5">
+        <ul className="flex justify-center flex-wrap border-y-2 border-cyan-900 p-10">
             {workData.entries.map((entry, index) => {
                 return <li key={index} className="w-1/2 list-disc">
                     <article className="flex flex-col items-center m-0 p-0">
