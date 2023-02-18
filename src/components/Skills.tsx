@@ -112,7 +112,7 @@ export default function (skillsData: SkillsData) {
                         <ul>
                             {skillsData.frontEnd.buildTools.map((tool, index) => {
                                 return <li key={index}
-                                    className="m-1"
+                                    className="list-disc m-1"
                                 >
                                     <h4 className="text-2xl">{tool.name}</h4>
                                 </li>
@@ -128,7 +128,7 @@ export default function (skillsData: SkillsData) {
                         {skillsData.apisSdks.map((tool, index) => {
                             return <li
                                 key={index}
-                                className="m-1"
+                                className="list-disc m-1"
                             >
                                 <h3 className="text-3xl">{tool}</h3>
                             </li>
@@ -145,7 +145,7 @@ export default function (skillsData: SkillsData) {
                         <ul>
                             {skillsData.backEnd.apis.map((tool, index) => {
                                 return <li key={index}
-                                    className="m-1"
+                                    className="m-1 list-disc"
                                 >
                                     <h4 className="text-2xl">{tool.name}</h4>
                                 </li>
@@ -158,7 +158,7 @@ export default function (skillsData: SkillsData) {
                         <ul>
                             {skillsData.backEnd.frameworks.map((tool, index) => {
                                 return <li key={index}
-                                    className="m-1"
+                                    className="m-1 list-disc"
                                 >
                                     <h4 className="text-2xl">{tool}</h4>
                                 </li>
@@ -172,7 +172,7 @@ export default function (skillsData: SkillsData) {
                         <ul>
                             {skillsData.backEnd.orms.map((tool, index) => {
                                 return <li key={index}
-                                    className="m-1"
+                                    className="m-1 list-disc"
                                 >
                                     <h4 className="text-2xl">
                                         {tool}
