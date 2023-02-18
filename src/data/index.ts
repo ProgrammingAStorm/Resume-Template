@@ -256,8 +256,6 @@ export class WorkHistoryData {
     }
 }
 
-
-
 export class EducationData {
     entries = [
         {
@@ -329,7 +327,9 @@ export class ProjectsData {
             techStack: ["React", "Vite", "Tailwind"],
             purpose: "To design a stylish resume with Tailwind, while getting practice in general with Tailwind.",
             takeAways: [
-                "React projects generated with Vite run very efficiently, and are created very seemlessly."
+                "React projects generated with Vite run very efficiently, and are created very seemlessly.",
+                "A good grasp of CSS fundamentals is all it takes to make a functional layout",
+                "Tailwind makes CSS fundamentals very fluid.",
             ],
         },
     ];
