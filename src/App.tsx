@@ -10,7 +10,7 @@ import { data } from "./data";
 function App() {
   return (
     <main className="flex flex-col items-center m-4 overflow-hidden">
-      <div className="flex w-screen ">
+      <div className="flex w-screen border-cyan-900">
         <Header {...data.header} />
         <Details {...data.personalDetails} />
       </div>

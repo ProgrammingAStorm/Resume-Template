@@ -46,7 +46,7 @@ export default function (skillsData: SkillsData) {
         })
     }
 
-    return <section className="flex flex-col items-center py-2 w-full">
+    return <section className="flex flex-col items-center border-y-2 border-cyan-900 py-2 w-full">
         <div className="w-full">
             <h1 className="w-full text-center text-7xl">Skills</h1>
 
