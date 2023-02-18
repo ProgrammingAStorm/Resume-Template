@@ -157,7 +157,7 @@ export default function WorkHistory(workData: WorkData) {
         });
 
         return boxes.map((box, index) => {
-            return <div key={index} className="flex flex-wrap w-full">
+            return <div key={index} className="flex flex-wrap justify-center w-full">
                 {box.map((items) => {
                     return items;
                 })}
