@@ -132,16 +132,16 @@ export class SkillsData {
 
 export class WorkData {
     entries = [
-        {
-            employer: "2U Bootcamps",
-            title: "Full-Stack Bootcamp Teacher's Instructor",
-            time: {
+        new WorkHistoryData(
+            "2U Bootcamps",
+            "Full-Stack Bootcamp Teacher's Instructor",
+            {
                 start: "Februrary 2023",
                 end: ""
             },
-            local: "Lanham, MD",
-            current: true,
-            tasks: [
+            "Lanham, MD",
+            true,
+            [
                 "Taking Attendence",
                 "Pushing Activities To GitLab",
                 "Grading Projects",
@@ -149,7 +149,7 @@ export class WorkData {
                 "Meeting In Zoom Calls 1-On-1 With Students",
                 "Helping Students Catch-Up During Class"
             ],
-            dayToDay: [
+            [
                 "One Slack And Monitor Until Office Hours",
                 "Help Students As Needed",
                 "Join Zoom Call At Office Hours",
@@ -159,24 +159,24 @@ export class WorkData {
                 "Help Students As Needed After Class",
                 "Stay In Office Hours Till Closing Or Students All Leave"
             ],
-            keyPoints: [
+            [
                 "Working With Students",
                 "Discussing Full-Stack Web Development",
                 "Mentoring Students",
                 "Teaching Industry Conventions And Best Practices",
                 "Encouraging Active Problem Solving"
             ]
-        },
-        {
-            employer: "Taco Bell",
-            title: "Customer Service Representative",
-            time: {
+        ),
+        new WorkHistoryData(
+            "Taco Bell",
+            "Customer Service Representative",
+            {
                 start: "August 2021",
                 end: ""
             },
-            local: "Howell, MI",
-            current: true,
-            tasks: [
+            "Howell, MI",
+            true,
+            [
                 "Count Drawer",
                 "Manage Drawer Monies",
                 "Maintain Seamless Customer Interactions",
@@ -184,7 +184,7 @@ export class WorkData {
                 "Maintain Local and General Cleanliness",
                 "Refill Food Stock"
             ],
-            dayToDay: [
+            [
                 "Clocking In",
                 "Check Daily Schedule",
                 "Check Shift Deployment",
@@ -193,12 +193,12 @@ export class WorkData {
                 "Maintain Customer Sale Speed",
                 "Maintain Cleanliness"
             ],
-            keyPoints: [
+            [
                 "Customers often have grievances that must be dealt with in a manner that is poth satisfactory and efficient.",
                 "Food stocks totals must be maintained to always assure ingredient up-time.",
                 "Customers are always prioritized, and speed and quality is the number one concern."
             ]
-        },
+        ),
         {
             employer: "Taco Bell",
             title: "Customer Service Representative",
@@ -233,6 +233,30 @@ export class WorkData {
         },
     ];
 };
+
+export class WorkHistoryData {
+    employer: string;
+    title: string;
+    time: any;
+    local: string;
+    current: boolean;
+    tasks: Array<string>;
+    dayToDay: Array<string>;
+    keyPoints: Array<string>;
+
+    constructor(employer: string, title: string, time: Object, local: string, current: boolean, tasks: Array<string>, dayToDay: Array<string>, keyPoints: Array<string>) {
+        this.employer = employer;
+        this.title = title;
+        this.time = time;
+        this.local = local;
+        this.current = current;
+        this.tasks = tasks;
+        this.dayToDay = dayToDay;
+        this.keyPoints = keyPoints;
+    }
+}
+
+
 
 export class EducationData {
     entries = [

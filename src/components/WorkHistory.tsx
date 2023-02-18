@@ -1,13 +1,20 @@
-import { WorkData } from "../data";
+import { ReactNode } from "react"
+import { WorkData, WorkHistoryData } from "../data";
 
 export default function WorkHistory(workData: WorkData) {
-    return <section className="flex flex-col items-center">
-        <h1 className="text-7xl border-x-2 border-cyan-900 p-10">Work History</h1>
+    function distribute(entries: Array<WorkHistoryData>, total: number): ReactNode {
+        // List of groups of three
+        const boxes: Array<Array<ReactNode>> = [];
+        // Current box being added
+        let currentBox: Array<ReactNode> = [];
 
-        <ul className="flex justify-center flex-wrap border-y-2 border-cyan-900 p-10">
-            {workData.entries.map((entry, index) => {
-                return <li key={index} className="w-1/2 list-disc">
-                    <article className="flex flex-col items-center m-0 p-0">
+        // Loops over the tools
+        entries.forEach((entry, index) => {
+            // Checks to see if the current box is filled
+            if (currentBox.length < total) {
+                // If not then it pushes the li to the current box
+                currentBox.push(<li key={index} className="list-disc border-cyan-900 odd:border-r-2 even:border-y-2 first:border-y-2 last:border-l-2 w-1/2">
+                    <article className="flex flex-col items-center">
                         <aside className="flex m-3">
                             <div className="flex flex-col m-1 items-start justify-center w-1/2">
                                 <h2 className="text-3xl">{entry.employer}</h2>
@@ -43,8 +50,8 @@ export default function WorkHistory(workData: WorkData) {
                                 <ul>
                                     {entry.dayToDay.map((day, index) => {
                                         return <li key={index}
-                                        className="m-1"
-                                    >
+                                            className="m-1"
+                                        >
                                             <p className="text-xl">
                                                 {day}
                                             </p>
@@ -59,8 +66,8 @@ export default function WorkHistory(workData: WorkData) {
                                 <ul>
                                     {entry.keyPoints.map((point, index) => {
                                         return <li key={index}
-                                        className="m-1"
-                                    >
+                                            className="m-1"
+                                        >
                                             <p className="text-xl">
                                                 {point}
                                             </p>
@@ -70,8 +77,103 @@ export default function WorkHistory(workData: WorkData) {
                             </div>
                         </aside>
                     </article>
-                </li>
-            })}
+                </li>);
+                // If it is, then it adds it to the boxes and clears the current box 
+            } else {
+                boxes.push(currentBox)
+                currentBox = [];
+
+                currentBox.push(<li key={index} className="list-disc border-cyan-900 odd:border-r-2 even:border-y-2 first:border-y-2 last:border-l-2 w-1/2">
+                    <article className="flex flex-col items-center w-1/2">
+                        <aside className="flex m-3">
+                            <div className="flex flex-col m-1 items-start justify-center w-1/2">
+                                <h2 className="text-3xl">{entry.employer}</h2>
+
+                                <h3 className="text-2xl">{entry.title}</h3>
+
+                                <h4 className="text-xl">{entry.time.start} - {entry.current ? "Current" : entry.time.end}</h4>
+
+                                <h4 className="text-lg">{entry.local}</h4>
+                            </div>
+
+                            <div className="flex flex-col m-2 items-center justify-evenly w-1/2">
+                                <h4 className="text-3xl">Tasks</h4>
+
+                                <ul>
+                                    {entry.tasks.map((task, index) => {
+                                        return <li key={index}
+                                            className="m-1"
+                                        >
+                                            <p className="text-xl">
+                                                {task}
+                                            </p>
+                                        </li>
+                                    })}
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <aside className="flex m-3">
+                            <div className="flex flex-col m-2 items-center w-1/2">
+                                <h4 className="text-3xl">Day To Day</h4>
+
+                                <ul>
+                                    {entry.dayToDay.map((day, index) => {
+                                        return <li key={index}
+                                            className="m-1"
+                                        >
+                                            <p className="text-xl">
+                                                {day}
+                                            </p>
+                                        </li>
+                                    })}
+                                </ul>
+                            </div>
+
+                            <div className="flex flex-col m-2 items-center w-1/2">
+                                <h4 className="text-3xl">Key Points</h4>
+
+                                <ul>
+                                    {entry.keyPoints.map((point, index) => {
+                                        return <li key={index}
+                                            className="m-1"
+                                        >
+                                            <p className="text-xl">
+                                                {point}
+                                            </p>
+                                        </li>
+                                    })}
+                                </ul>
+                            </div>
+                        </aside>
+                    </article>
+                </li>);
+            }
+
+            if (currentBox.length === total) {
+                boxes.push([...currentBox]);
+                currentBox = [];
+            }
+        });
+
+        return boxes.map((box, index) => {
+            return <div key={index} className="flex flex-wrap w-full">
+                {box.map((items) => {
+                    return items;
+                })}
+            </div>
+        })
+    }
+
+    return <section className="flex flex-col items-center">
+        <h1 className="text-7xl border-x-2 border-cyan-900 p-10">Work History</h1>
+
+        <ul className="flex flex-wrap border-b-2 border-cyan-900">
+            {/* {workData.entries.map((entry, index) => {
+                return 
+            })} */
+                distribute(workData.entries, 3)
+            }
         </ul>
     </section>
 }
