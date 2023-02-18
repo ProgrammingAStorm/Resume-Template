@@ -46,12 +46,12 @@ export default function (skillsData: SkillsData) {
         })
     }
 
-    return <section className="flex flex-col items-center border-y-2 border-cyan-900 py-2 w-full">
-        <h1 className="text-center text-7xl">Skills</h1>
+    return <section className="flex flex-col items-center border-y-2 border-cyan-900 w-full">
+        <h1 className="text-7xl border-x-2 border-cyan-900 p-10">Skills</h1>
 
-        <div className="flex justify-around w-full">
-            <div className="flex w-1/2">
-                <article className="flex flex-col items-center w-fit m-2">
+        <div className="flex border-t-2 border-cyan-900 py-6 w-full">
+            <div className="flex justify-around w-1/2">
+                <article className="flex flex-col justify-around items-center w-fit m-2">
                     <h2 className="text-4xl">Languages</h2>
 
                     <div>
@@ -80,7 +80,7 @@ export default function (skillsData: SkillsData) {
                     </div>
                 </article>
 
-                <article className="flex flex-col items-center w-fit m-2">
+                <article className="flex flex-col justify-around items-center w-fit m-2">
                     <h2 className="text-4xl">Front-End</h2>
 
                     <div className="flex flex-col items-center m-2">
@@ -124,8 +124,8 @@ export default function (skillsData: SkillsData) {
                 </article>
             </div>
 
-            <div className="flex w-1/2">
-                <article className="flex flex-col items-center w-fit m-2">
+            <div className="flex justify-around w-1/2">
+                <article className="flex flex-col justify-around items-center w-fit m-2">
                     <h2 className="text-4xl">Back-End</h2>
 
                     <div className="flex flex-col m-2 items-center">
@@ -172,8 +172,8 @@ export default function (skillsData: SkillsData) {
                     </div>
                 </article>
 
-                <div className="flex flex-col items-center">
-                    <article className="flex flex-col items-center w-fit m-2">
+                <div className="flex flex-col justify-around items-center">
+                    <article className="flex flex-col justify-around items-center w-fit m-2">
                         <h2 className="text-4xl">APIs & SDKs</h2>
 
                         <ul>
@@ -188,7 +188,7 @@ export default function (skillsData: SkillsData) {
                         </ul>
                     </article>
 
-                    <article className="flex flex-col items-center m-2">
+                    <article className="flex flex-col justify-around items-center m-2">
                         <h2 className="text-4xl">Traits</h2>
 
                         <ul className="flex">
