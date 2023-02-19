@@ -91,7 +91,7 @@ export default function Projects(projectData: ProjectsData) {
         })
     }
 
-    return <section className="flex flex-col items-center">
+    return <section className="flex flex-col items-center border-b-2 border-cyan-900">
         <h1 className="text-7xl p-10 border-x-2 border-cyan-900">Projects</h1>
 
         <ul className="flex items-stretch border-cyan-900">
