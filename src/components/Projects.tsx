@@ -1,12 +1,16 @@
-import { ProjectsData } from "../data";
+import { ReactNode } from "react"
+import { ProjectsData, ProjectData } from "../data";
 
 export default function Projects(projectData: ProjectsData) {
-    return <section className="flex flex-col items-center">
-        <h1 className="text-7xl">Projects</h1>
+    function distribute(entries: Array<ProjectData>, total: number): ReactNode {
+        // List of groups of three
+        const boxes: Array<Array<ReactNode>> = [];
+        // Current box being added
+        let currentBox: Array<ReactNode> = [];
 
-        <div className="flex items-stretch m-2">
-            {projectData.projects.map((project, index) => {
-                return <article key={index} className="flex flex-col justify-evenly w-1/3">
+        const getHistory = (project: ProjectData, index: number) => {
+            return <li className="list-disc list-inside w-1/2 p-3 border-cyan-900 first:border-y-2 last:border-x-2 odd:border-r-2 even:border-y-2">
+                <article key={index} className="flex flex-col justify-evenly">
                     <div className=" flex flex-col items-center w-full">
                         <h2
                             className="text-4xl justify-self-start m-2"
@@ -55,7 +59,45 @@ export default function Projects(projectData: ProjectsData) {
                         </div>
                     </div>
                 </article>
-            })}
-        </div>
+            </li>
+        }
+
+        // Loops over the tools
+        entries.forEach((entry, index) => {
+            // Checks to see if the current box is filled
+            if (currentBox.length < total) {
+                // If not then it pushes the li to the current box
+                currentBox.push(getHistory(entry, index));
+                // If it is, then it adds it to the boxes and clears the current box 
+            } else {
+                boxes.push(currentBox)
+                currentBox = [];
+
+                currentBox.push(getHistory(entry, index));
+            }
+
+            if (currentBox.length === total) {
+                boxes.push([...currentBox]);
+                currentBox = [];
+            }
+        });
+
+        return boxes.map((box, index) => {
+            return <div key={index} className="flex flex-wrap justify-center w-full">
+                {box.map((items) => {
+                    return items;
+                })}
+            </div>
+        })
+    }
+
+    return <section className="flex flex-col items-center">
+        <h1 className="text-7xl p-10 border-x-2 border-cyan-900">Projects</h1>
+
+        <ul className="flex items-stretch border-cyan-900">
+            {
+                distribute(projectData.projects, 3)
+            }
+        </ul>
     </section>
 }
