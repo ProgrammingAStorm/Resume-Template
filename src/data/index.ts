@@ -4,7 +4,44 @@ export class Data {
     skills = new SkillsData();
     workHistory = new WorkData();
     education = new EducationData();
-    projects = new ProjectsData();
+    projects = new ProjectsData([
+        new ProjectData(
+            "Instaclone",
+            [
+                "MongoDB",
+                "Express",
+                "React",
+                "Node.js"
+
+            ],
+            "It was created as the capstone project for the Full-Stack Coding Bootcamp. It was intended to show off all of what we had learned during the bootcamp, and show of our skills as developers. From data coupling to API routes to layout design, as well as data modeling, this project covered it all.",
+            [
+                "People work at different paces and we need to be able to communicate with the lowest common demoninator at times.",
+                "Sometimes good enough is better than not at all.",
+                "Being a good leader is about being the one with your head screwed on correct, that answers all of the questions, and makes sure everyone is on the up-and-up."
+            ],
+        ),
+        new ProjectData(
+            "Flutter Portfolio",
+            ["Flutter"],
+            "To get familiar with the Dart programming language and the Flutter front-end design framework. I wanted to get practice with Flutter's design implementation, as well as get more experience with Object-Oriented Programming. I would said my time with Flutter was well worth-it.",
+            [
+                "Learning a new language can take longer than you estimated.",
+                "Sometimes design elements that seem simple to implement end up taking up the most time.",
+                "There will come times when you need to stop working on something for the sake of preventing burn-out."
+            ],
+        ),
+        new ProjectData(
+            "Resume-Template",
+            ["React", "Vite", "Tailwind"],
+            "To design a stylish resume with Tailwind, while getting practice in general with Tailwind.",
+            [
+                "React projects generated with Vite run very efficiently, and are created very seemlessly.",
+                "A good grasp of CSS fundamentals is all it takes to make a functional layout",
+                "Tailwind makes CSS fundamentals very fluid.",
+            ],
+        ),
+    ]);
 };
 
 export class HeaderData {
@@ -295,45 +332,25 @@ export class EducationData {
 };
 
 export class ProjectsData {
-    projects = [
-        {
-            name: "Instaclone",
-            techStack: [
-                "MongoDB",
-                "Express",
-                "React",
-                "Node.js"
+    constructor(projects: Array<any>) {
+        this.projects = projects;
+    };
 
-            ],
-            purpose: "It was created as the capstone project for the Full-Stack Coding Bootcamp. It was intended to show off all of what we had learned during the bootcamp, and show of our skills as developers. From data coupling to API routes to layout design, as well as data modeling, this project covered it all.",
-            takeAways: [
-                "People work at different paces and we need to be able to communicate with the lowest common demoninator at times.",
-                "Sometimes good enough is better than not at all.",
-                "Being a good leader is about being the one with your head screwed on correct, that answers all of the questions, and makes sure everyone is on the up-and-up."
-            ],
-        },
-        {
-            name: "Flutter Portfolio",
-            techStack: ["Flutter"],
-            purpose: "To get familiar with the Dart programming language and the Flutter front-end design framework. I wanted to get practice with Flutter's design implementation, as well as get more experience with Object-Oriented Programming. I would said my time with Flutter was well worth-it.",
-            takeAways: [
-                "Learning a new language can take longer than you estimated.",
-                "Sometimes design elements that seem simple to implement end up taking up the most time.",
-                "There will come times when you need to stop working on something for the sake of preventing burn-out."
-            ],
-        },
-        {
-            name: "Resume-Template",
-            techStack: ["React", "Vite", "Tailwind"],
-            purpose: "To design a stylish resume with Tailwind, while getting practice in general with Tailwind.",
-            takeAways: [
-                "React projects generated with Vite run very efficiently, and are created very seemlessly.",
-                "A good grasp of CSS fundamentals is all it takes to make a functional layout",
-                "Tailwind makes CSS fundamentals very fluid.",
-            ],
-        },
-    ];
+    projects: Array<any>;
 };
+
+export class ProjectData {
+    constructor(name: string, techStack: Array<string>, purpose: string, takeAways: Array<string>) {
+        this.name = name;
+        this.techStack = techStack;
+        this.purpose = purpose;
+        this.takeAways = takeAways;
+    }
+    name: string;
+    techStack: Array<string>;
+    purpose: string;
+    takeAways: Array<string>;
+}
 
 const data = new Data();
 
