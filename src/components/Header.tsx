@@ -1,7 +1,7 @@
 import { HeaderData } from "../data"
 
 export default function Header(header: HeaderData) {
-    return <header className="flex flex-col justify-center w-1/2">
+    return <header className="flex flex-col justify-center w-1/2 shadow-md shadow-cyan-900">
         <div className="p-2">
             <div className="flex justify-center items-center">
                 <h1 className="flex flex-col justify-end items-end text-9xl">
