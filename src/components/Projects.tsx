@@ -9,8 +9,8 @@ export default function Projects(projectData: ProjectsData) {
         let currentBox: Array<ReactNode> = [];
 
         const getHistory = (project: ProjectData, index: number) => {
-            return <li className="list-disc list-inside w-1/2 p-3 border-cyan-900 first:border-y-2 last:border-x-2 odd:border-r-2 even:border-y-2">
-                <article key={index} className="flex flex-col justify-evenly">
+            return <li className="list-disc list-inside w-1/2 p-6 border-cyan-900 first:border-y-2 last:border-x-2 odd:border-r-2 even:border-y-2">
+                <article key={index} className="flex flex-col justify-evenly h-full p-4">
                     <div className=" flex flex-col items-center w-full">
                         <h2
                             className="text-4xl justify-self-start m-2"
