@@ -9,7 +9,7 @@ export default function WorkHistory(workData: WorkData) {
         let currentBox: Array<ReactNode> = [];
 
         const getHistory = (entry: WorkHistoryData, index: number) => {
-            return <li key={index} className="list-disc list-inside p-4 w-1/2 h-1/2 border-cyan-900 first:border-y-2 last:border-x-2 odd:border-r-2 even:border-y-2">
+            return <li key={index} className="list-disc list-inside p-4 w-1/2 h-1/2 border-cyan-900 first:border-y-2 last:border-x-2 odd:border-r-2 even:border-y-2 shadow-md shadow-cyan-900">
                 <article className="flex flex-col items-stretch w-full h-full">
                     <aside className="flex m-3 h-1/2">
                         <div className="flex flex-col m-1 items-start justify-center w-1/2">
@@ -106,9 +106,9 @@ export default function WorkHistory(workData: WorkData) {
     }
 
     return <section className="flex flex-col items-center">
-        <h1 className="text-7xl border-x-2 border-cyan-900 p-10">Work History</h1>
+        <h1 className="text-7xl border-x-2 border-cyan-900 p-10 shadow-md shadow-cyan-900">Work History</h1>
 
-        <ul className="flex flex-wrap border-b-2 border-cyan-900">
+        <ul className="flex flex-wrap border-b-2 border-cyan-900 shadow-md shadow-cyan-900">
             {/* {workData.entries.map((entry, index) => {
                 return 
             })} */

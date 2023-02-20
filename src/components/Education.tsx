@@ -1,8 +1,8 @@
 import { EducationData } from "../data";
 
 export default function Education(educationData: EducationData) {
-    return <section className="flex flex-col items-center w-full border-b-2 border-x-2 border-cyan-900 p-7">
-        <h1 className="text-7xl">Education</h1>
+    return <section className="flex flex-col items-center w-full border-b-2 border-x-2 border-cyan-900 p-7 shadow-md shadow-cyan-900">
+        <h1 className="text-7xl ">Education</h1>
 
         <ul>
             {educationData.entries.map((entry, index) => {
