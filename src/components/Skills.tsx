@@ -46,11 +46,11 @@ export default function (skillsData: SkillsData) {
         })
     }
 
-    return <section className="flex flex-col items-center border-y-2 border-cyan-900 w-full">
-        <h1 className="text-7xl border-x-2 border-cyan-900 p-10">Skills</h1>
+    return <section className="flex flex-col items-center border-y-2 border-cyan-900 w-full shadow-md shadow-cyan-900">
+        <h1 className="text-7xl border-x-2 border-cyan-900 p-10 shadow-md shadow-cyan-900">Skills</h1>
 
-        <div className="flex border-t-2 border-cyan-900 w-full">
-            <div className="flex justify-around w-1/2 p-6 border-r-2 border-cyan-900">
+        <div className="flex border-t-2 border-cyan-900 w-full shadow-md shadow-cyan-900">
+            <div className="flex justify-around w-1/2 p-6 border-r-2 border-cyan-900 shadow-md shadow-cyan-900">
                 <article className="flex flex-col justify-around items-center w-fit m-2">
                     <h2 className="text-4xl">Languages</h2>
 
@@ -124,7 +124,7 @@ export default function (skillsData: SkillsData) {
                 </article>
             </div>
 
-            <div className="flex justify-around w-1/2 p-6">
+            <div className="flex justify-around w-1/2 p-6 shadow-md shadow-cyan">
                 <article className="flex flex-col justify-around items-center w-fit m-2">
                     <h2 className="text-4xl">Back-End</h2>
 
