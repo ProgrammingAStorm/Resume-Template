@@ -39,6 +39,8 @@ export class Data {
                 "React projects generated with Vite run very efficiently, and are created very seemlessly.",
                 "A good grasp of CSS fundamentals is all it takes to make a functional layout",
                 "Tailwind makes CSS fundamentals very fluid.",
+                "A little planning goes a long way",
+                "A little practice sets you up with big dividends in the future."
             ],
         ),
     ]);

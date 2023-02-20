@@ -89,7 +89,7 @@ export default function (skillsData: SkillsData) {
                         <ul className="flex justify-between w-full">
                             {skillsData.frontEnd.frameworksLibraries.map((tool, index) => {
                                 return <li key={index}
-                                    className="m-1"
+                                    className="m-1 list-disc"
                                 >
                                     <h4 className="text-2xl">{tool.name}</h4>
                                     <p className="text-xl">{tool.time}</p>
