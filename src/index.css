@@ -10,8 +10,8 @@ html {
     font-family: 'Merriweather', serif;
 }
 
-.background {
-    background-image: url("../public/img/background.png");
+.background:before {
+    background-image: url("/img/background.png");
 }
 
 .layered-peaks:before {
