@@ -1,10 +1,10 @@
 import { EducationData } from "../data";
 
 export default function Education(educationData: EducationData) {
-    return <section className="flex flex-col items-center w-full border-b-2 border-x-2 border-cyan-900 p-7 shadow-md shadow-cyan-900">
-        <h1 className="text-7xl ">Education</h1>
+    return <section className="relative flex flex-col items-center w-full border-b-2 border-x-2 border-cyan-900 shadow-md shadow-cyan-900 before:absolute before:-z-10 before:bg-center before:bg-cover before:bg-no-repeat before:opacity-60 before:bg-[url('src/assets/svg/layered-waves-16:9.svg')] before:content-[''] before:w-full before:h-full">
+        <h1 className="text-7xl p-6">Education</h1>
 
-        <ul>
+        <ul className="p-3">
             {educationData.entries.map((entry, index) => {
                 return <li key={index}>
                     <article className="flex items-center m-2">
