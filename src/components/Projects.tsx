@@ -91,7 +91,7 @@ export default function Projects(projectData: ProjectsData) {
         })
     }
 
-    return <section className="relative flex flex-col items-center border-b-2 border-cyan-900 shadow-md shadow-cyan-900  before:absolute before:-z-10 before:bg-center before:bg-cover before:bg-no-repeat before:opacity-60 before:bg-[url('src/assets/svg/layered-waves-16:9.svg')] before:content-[''] before:w-full before:h-full ">
+    return <section className="relative flex flex-col layered-waves items-center border-b-2 border-cyan-900 shadow-md shadow-cyan-900  before:absolute before:-z-10 before:bg-center before:bg-cover before:bg-no-repeat before:opacity-60 before:content-[''] before:w-full before:h-full ">
         <h1 className="text-7xl p-10 border-x-2 border-cyan-900 shadow-md shadow-cyan-900">Projects</h1>
 
         <ul className="flex items-stretch border-cyan-900 shadow-md shadow-cyan-900">

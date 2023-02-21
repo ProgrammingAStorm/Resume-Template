@@ -9,3 +9,23 @@
 html {
     font-family: 'Merriweather', serif;
 }
+
+.layered-peaks:before {
+    background-image: url('src/assets/svg/layered-peaks-top-16:9.svg');
+}
+
+.stacked-peaks:before {
+    background-image: url('src/assets/svg/stacked-peaks-16:9.svg');
+}
+
+.stacked-waves:before {
+    background-image: url('src/assets/svg/stacked-waves-16:9.svg');
+}
+
+.waves:before {
+   background-image: url('src/assets/svg/wave-16:9.svg'); 
+}
+
+.layered-waves:before {
+    background-image: url('src/assets/svg/layered-waves-16:9.svg');
+}
