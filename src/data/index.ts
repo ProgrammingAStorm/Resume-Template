@@ -233,21 +233,21 @@ export class WorkData {
                 "Maintain Cleanliness"
             ],
             [
-                "Customers often have grievances that must be dealt with in a manner that is poth satisfactory and efficient.",
+                "Customers often have grievances that must be dealt with in a manner that is both satisfactory and efficient.",
                 "Food stocks totals must be maintained to always assure ingredient up-time.",
                 "Customers are always prioritized, and speed and quality is the number one concern."
             ]
         ),
-        {
-            employer: "Taco Bell",
-            title: "Customer Service Representative",
-            time: {
+        new WorkHistoryData(
+            "Taco Bell",
+            "Customer Service Representative",
+            {
                 start: "February 2019",
                 end: "February 2021"
             },
-            local: "Livonia, MI",
-            current: false,
-            tasks: [
+            "Livonia, MI",
+            false,
+            [
                 "Count Drawer",
                 "Manage Drawer Monies",
                 "Maintain Seamless Customer Interactions",
@@ -255,7 +255,7 @@ export class WorkData {
                 "Maintain Local and General Cleanliness",
                 "Refill Food Stock"
             ],
-            dayToDay: [
+            [
                 "Clocking In",
                 "Check Daily Schedule",
                 "Check Shift Deployment",
@@ -264,12 +264,12 @@ export class WorkData {
                 "Maintain Customer Sale Speed",
                 "Maintain Cleanliness"
             ],
-            keyPoints: [
-                "Customers often have grievances that must be dealt with in a manner that is poth satisfactory and efficient.",
+            [
+                "Customers often have grievances that must be dealt with in a manner that is both satisfactory and efficient.",
                 "Food stocks totals must be maintained to always assure ingredient up-time.",
                 "Customers are always prioritized, and speed and quality is the number one concern."
             ]
-        },
+        )
     ];
 };
 
