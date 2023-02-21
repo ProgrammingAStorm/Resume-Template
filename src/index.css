@@ -10,6 +10,10 @@ html {
     font-family: 'Merriweather', serif;
 }
 
+.background {
+    background-image: url("../public/img/background.png");
+}
+
 .layered-peaks:before {
     background-image: url('/svg/layered-peaks-top-16:9.svg');
 }
