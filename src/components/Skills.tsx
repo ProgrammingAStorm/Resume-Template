@@ -46,7 +46,7 @@ export default function (skillsData: SkillsData) {
         })
     }
 
-    return <section className="flex flex-col items-center border-y-2 border-cyan-900 w-full shadow-md shadow-cyan-900">
+    return <section className="relative flex flex-col items-center border-y-2 border-cyan-900 w-full shadow-md shadow-cyan-900  before:absolute before:-z-10 before:bg-center before:bg-cover before:bg-no-repeat before:opacity-70 before:bg-[url('src/assets/svg/stacked-peaks-16:9i.svg')] before:content-[''] before:w-full before:h-full">
         <h1 className="text-7xl border-x-2 border-cyan-900 p-10 shadow-md shadow-cyan-900">Skills</h1>
 
         <div className="flex border-t-2 border-cyan-900 w-full shadow-md shadow-cyan-900">
