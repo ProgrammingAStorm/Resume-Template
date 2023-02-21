@@ -105,7 +105,7 @@ export default function WorkHistory(workData: WorkData) {
         })
     }
 
-    return <section className="flex flex-col items-center">
+    return <section className="relative flex flex-col items-center bg-cover before:absolute before:-z-10 before:bg-center before:bg-cover before:bg-no-repeat before:opacity-60 before:bg-[url('src/assets/svg/wave-16:9.svg')] before:content-[''] before:w-full before:h-full ">
         <h1 className="text-7xl border-x-2 border-cyan-900 p-10 shadow-md shadow-cyan-900">Work History</h1>
 
         <ul className="flex flex-wrap border-b-2 border-cyan-900 shadow-md shadow-cyan-900">
