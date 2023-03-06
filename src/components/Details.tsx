@@ -13,9 +13,9 @@ export default function Details(personalData: PersonalData) {
             flex flex-wrap
             justify-evenly
         ">
-            {personalData.personalDetails.map((details) => {
+            {personalData.personalDetails.map((details, index) => {
                 return <li
-                    key={details.key}
+                    key={index}
                     className="
                         flex flex-col
                         text-center 

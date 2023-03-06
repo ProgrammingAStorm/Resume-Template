@@ -57,27 +57,18 @@ export class PersonalData {
         {
             link: "programmingastorm@gmail.com",
             name: "Professional Email",
-            key: 0,
         },
         {
-            link: "markpavel02@gmail.com",
-            name: "Personal Email",
-            key: 1,
-        },
-        {
-            link: "https://programmingastorm.github.io/Flutter-Portfolio/#/",
+            link: "https://www.programmingastorm.xyz/",
             name: "Personal Website",
-            key: 2,
         },
         {
             link: "https://github.com/ProgrammingAStorm",
             name: "GitHub",
-            key: 3,
         },
         {
             link: "https://www.linkedin.com/in/mark-pavel-744297202/",
             name: "LinkedIn",
-            key: 4,
         }
     ];
 };
